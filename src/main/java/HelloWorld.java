@@ -76,6 +76,8 @@ public class HelloWorld {
         System.out.println(Arrays.toString(getNumbers("-23+x=-20")));
         System.out.println(getEquationFormula("-23+x=-20"));
         System.out.println(solveEquation("-23+x=-20"));
+
+        // some changes in HelloWorld class //
     }
 }
 

@@ -19,4 +19,8 @@ public class Square extends Shape{
         return length * 4;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + ", side=" + length;
+    } // calling the super class implementation and adding some part to it
 }

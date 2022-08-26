@@ -3,7 +3,6 @@ package CYDEO.days.day40_inheritance.shape;
 public class Test {
     public static void main(String[] args) {
         Square s = new Square(5);
-
         System.out.println(s);
         System.out.println(s.perimeter);
 

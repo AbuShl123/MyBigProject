@@ -20,4 +20,9 @@ public class Rectangle extends Shape{
     public double perimeter() {
         return (length + width) * 2;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", length=" + length + ", width=" + width;
+    }
 }

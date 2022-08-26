@@ -19,10 +19,10 @@ public class Shape {
 
     @Override
     public String toString() {
-        return "Shape{" +
+        return "Shape: " +
                 "type='" + type + '\'' +
                 ", area=" + area +
-                ", perimeter=" + perimeter +
-                '}';
+                ", perimeter=" + perimeter;
     }
+
 }

@@ -9,5 +9,7 @@ public class Phone {
         System.out.println(youtube.version);
         youtube.download();
         youtube.watchVideo();
+        System.out.println(youtube);
+
     }
 }

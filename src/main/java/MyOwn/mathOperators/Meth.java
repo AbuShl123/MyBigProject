@@ -64,25 +64,25 @@ public class Meth {
     }
 
     public static String[] getNumbers(String example) { // example: "12-10+5-2+30"
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < example.length(); i++) {
             char c = example.charAt(i);
             if (c == '=') {
                 if (example.charAt(i+1) == '-') {
-                    result += " -";
+                    result.append(" -");
                     i++;
                     continue;
                 }
-                result += " "; continue;
+                result.append(" "); continue;
             }
             if (c == '+') {
-                result += " "; continue;
+                result.append(" "); continue;
             } else if ( c == '-') {
-                result += " ";
+                result.append(" ");
             }
-            result += c;
+            result.append(c);
         }
-        return result.trim().split(" ");
+        return result.toString().trim().split(" ");
     }
 
     public static int solveEquation(String str) { // -5+x=15

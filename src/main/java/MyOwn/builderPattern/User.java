@@ -1,6 +1,6 @@
 package MyOwn.builderPattern;
 
-public class User {
+public final class User {
     //all final attributes
     private final String firstName; // required
     private final String lastName; // required
@@ -65,7 +65,6 @@ public class User {
         }
 
         //Return the finally constructed User object
-
         public User build() {
             return new User(this);
         }

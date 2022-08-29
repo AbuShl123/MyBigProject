@@ -2,10 +2,9 @@ package MyOwn.mathOperators;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class Meth {
-    public String solvingBrackets(String str) { // str =  (23-3)+(32-1)+(12+4+110)-(23+44) = 20+31+136-67 = 0
+public final class Meth { // utility class
+    public static String solvingBrackets(String str) { // str =  (23-3)+(32-1)+(12+4+110)-(23+44) = 20+31+136-67 = 0
         str = str.replace(" ", "");
         String[] a = str.split("[()]");
         if (a.length <= 1) return str;
@@ -19,7 +18,7 @@ public class Meth {
         return keyStr.toString();
     }
 
-    public ArrayList<Double> findNum(String str) { // str = "20+31+136-67";  a = {20, 31, 136, -67}
+    public static ArrayList<Double> findNum(String str) { // str = "20+31+136-67";  a = {20, 31, 136, -67}
         StringBuilder n = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == '-' || str.charAt(i) == '+')
@@ -33,7 +32,7 @@ public class Meth {
         return a;
     }
 
-    public double mathOpWithArr(ArrayList<Double> a) { // []a = {20, 31, 136, -67};
+    public static double mathOpWithArr(ArrayList<Double> a) { // []a = {20, 31, 136, -67};
         double answer = 0;
         for (double num : a) {
             answer += num;

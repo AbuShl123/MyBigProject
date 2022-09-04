@@ -1,4 +1,4 @@
-package MyOwn.concetpsOfOOP.Encapsulation;
+package MyOwn.conceptsOOP.encapsulation;
 
 public class Student {
     private String name;
@@ -11,7 +11,7 @@ public class Student {
     }
 }
 
-class Test {
+class Test1 {
     public static void main(String[] args) {
         Student s = new Student();
         s.setName("Abu");

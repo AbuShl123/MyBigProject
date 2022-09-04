@@ -1,4 +1,4 @@
-package MyOwn.concetpsOfOOP.Abstraction.Interface.Shape;
+package MyOwn.conceptsOOP.Abstraction.Interface.Shape;
 
 public class Shaping implements ShapeGeometry{
 

@@ -18,7 +18,7 @@ public class DataBase {
 
 class Main {
     public static void main(String[] args) {
-        DataBase obj = DataBase.getInstance(); // there is only one instance of the class (it's through dbObject)
+        DataBase obj = DataBase.getInstance(); // there is only one instance of the class (it's dbObject)
 
         obj.getConnection(); // this method cannot be used without creating the object of class.
     }

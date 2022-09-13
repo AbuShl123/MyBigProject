@@ -16,10 +16,6 @@ public class Bot1 extends TelegramLongPollingBot {
     @Override
     @SneakyThrows
     public void onUpdateReceived(Update update) {
-        execute(
-                SendMessage.builder()
-                        .text("hi").chatId(update.getMessage().getChatId().toString()).build()
-        );
         if (update.hasMessage()) {
             handleMessage(update.getMessage());
         }

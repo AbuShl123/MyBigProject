@@ -1,0 +1,84 @@
+
+-----------------------------------------------REFERENCE TYPE CASTING---------------------------------------------------
+
+    able to cast/change the reference of the object to a different reference type
+
+    upcasting : from sub class to a super class
+        automatically/implicitly
+
+    down-casting : from super class to a sub class
+        manually/explicitly
+
+WebDrier driver = new ChromeDriver();
+
+scenario: fail the test, so we want to take a screenshot
+
+    driver -> this is a WebDriver interface, but WebDriver interface does not know screenshot method
+
+    ( (TakeScreenShot) driver).screenshot() -> now the reference was cast to TakeScreenshot interface, which has access
+                                               to the screenshot() method. Now we can execute the method
+
+----------------------------------------------DYNAMIC POLYMORPHISM------------------------------------------------------
+
+static polymorphism / static polymorphism / compile time binding
+    method overloading
+
+dynamic polymorphism / dynamic polymorphism / run time binding
+    method overriding
+
+    calling a method and executing are different and they ar enot linked
+    you can call a method everywhere
+    execution happens during runtime
+
+-----------------------------------------------COLLECTION FRAMEWORK-----------------------------------------------------
+
+    -- a group of interfaces and classes that define the structures that handle data differently
+    -- They define how data is added, or read from etc, based on different algorithms and implementations
+
+    data structure
+        array: size fixed, no methods, allows primitive data types and non-primitive types
+        Collections: more flexible, have different ways to handle data, only works with object types (non-primitive),
+        has methods.
+
+Main interface of the Framework:
+
+    Collection: the parent of the collection types, defines the main functions of the collection
+        ex: add(), remove(), size()
+
+    List: ordered(index), allows duplicates
+
+    Set: unordered(no indexes), no duplicates
+
+Classes that implement List:
+
+    ArrayList: data structure that uses array internally. Re-sizable array
+        useful to storing and reading the information
+
+    LinkedList: data structure that uses nodes internally
+        also implements the Deque -> doubly linked
+        useful to manipulate the collection. adding and removing is handled efficiently
+        Node - the object that has the value reference to the node before and reference to the node after it
+
+    Vector: legacy version of ArrayList. It is synchronized
+        -> synchronization: thread-safe
+        -> thread-safe: multiple threads cannot access at the same time
+                                                            think of atm example
+
+Classes that implement Set:
+
+    HashSet: follows a Hashing algorithm, which means handles data fast and efficiently
+        data structure that uses HashMap internally (talk about this later)
+    the order is basically random
+
+    LinkedHashSet: data structure that uses HashTable and LinkedList implementations
+            the insertion order is maintained
+
+    -> interface: SortedSet extends Set
+            TreeSet implements SortedSet
+                elements sorted in natural order (sorted order, smallest to largest, lexicographical)
+                null is not allowed
+
+Q: What's the difference between Collection and Collections ?
+    Collection : main interface in the Collection framework
+    Collections : utility class that has some useful methods for collection types
+        sort(), max(), frequency()

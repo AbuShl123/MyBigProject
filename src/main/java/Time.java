@@ -1,15 +1,12 @@
 import CYDEO.days.day40_inheritance.shape.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.LinkedList;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Time {
     public static String countLetters(String str){
         String res = "";
-        while (str.length() != 0) {
+        while (str.length() !=  0) {
             String let = str.substring(0,1);
             int c = str.length();
             str = str.replace(let, "");
@@ -47,14 +44,17 @@ public class Time {
         return nums;
     }
 
-    public static void main(String[] args) {
-        System.out.println(countLetters("aaabbc"));
-        int[] a = {1,4,6,2};
-        int[] b = Arrays.copyOf(a, 2);
-        System.out.println(Arrays.toString(b));
+    public static void run(int min) {
+        System.out.println("running for " + min + " minutes");
+    }
 
-        String[] str = {"1", "2", "aa", "1"};
-        System.out.println(getDup(str));
+
+
+    public static void main(String[] args) {
+
+        int[] arr = {1,2,3};
+        arr = Arrays.copyOf(arr, 2);
+        System.out.println(Arrays.toString(arr));
     }
 }
 

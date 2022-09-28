@@ -1,7 +1,7 @@
 package myOwn.conceptsOOP.Class_And_Object.game;
 
 import java.util.Scanner;
-import static myOwn.classRECOURSE.*;
+import static myOwn.utilites.classRECOURSE.*;
 
 public class Map {
     public static void main(String[] args) {

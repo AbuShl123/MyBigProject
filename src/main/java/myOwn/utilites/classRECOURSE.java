@@ -1,4 +1,4 @@
-package myOwn;
+package myOwn.utilites;
 
 public class classRECOURSE {
     // Reset
